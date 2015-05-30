@@ -1,5 +1,6 @@
 {
     "karl": {
+        "alias": "karl",
         "name": "Карл",
     	"image": "/images/karl.jpg",
         "texts": [{
@@ -20,6 +21,7 @@
     },
 
     "philosoraptor": {
+        "alias": "philosoraptor",
         "name": "Филосораптор",
         "image": "/images/philosoraptor.jpg",
         "texts": [{

@@ -20,6 +20,7 @@
         defaults: {
         	edit: true,
             imageUrl: undefined,
+            alias: undefined,
             texts: [] // Collection
         },
 
@@ -380,7 +381,7 @@
 		download: function () {
 			var dataURL = this.canvas.toDataURL('image/jpeg');
 	    	this.button.href = dataURL;
-	    	this.button.download = 'carl' + JSON.stringify(this.model.attributes).hashCode() + '.jpg';
+	    	this.button.download = this.model.get('alias') + JSON.stringify(this.model.attributes).hashCode() + '.jpg';
 		}
 
 	});
@@ -411,6 +412,7 @@
 	// Init it!
 
     var meme = new Meme({
+    	alias: DEFAULT.alias,
     	imageUrl: DEFAULT.image,
     	texts: new Texts(DEFAULT.texts)
     });
