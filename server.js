@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var exphbs  = require('express3-handlebars');
+var _ = require('underscore');
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -27,10 +28,20 @@ app.get('/', function(req, res) {
 app.get('/*', function(req, res) {
 	var name = req.params[0];
 
+	var menu = [];
+	_.forEach(data, function (value, key, list) {
+		menu.push({
+			current: key === name,
+			uri: '/' + key,
+			name: value.name
+		})
+	});
+
 	if (!data[name] || !fs.existsSync('public/' + data[name].image)) {
 		res.sendStatus(404);
 	} else {
 		res.render('main', {
+			menu: menu,
 			data: JSON.stringify(data[name])
 		});
 	}

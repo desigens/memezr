@@ -1,5 +1,6 @@
 {
     "karl": {
+        "name": "Карл",
     	"image": "/images/karl.jpg",
         "texts": [{
             "text": "чтобы сделать смешную картинку",
@@ -19,6 +20,7 @@
     },
 
     "philosoraptor": {
+        "name": "Филосораптор",
         "image": "/images/philosoraptor.jpg",
         "texts": [{
             "text": "Если я могу сделать картинку прямо в браузере",

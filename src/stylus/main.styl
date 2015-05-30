@@ -17,6 +17,7 @@ body {
 header {
     color: #fff;
     padding: 20px;
+    float: left;
 }
 
 header i {
@@ -216,7 +217,8 @@ select {
     display: none; 
 }
 
-a {
+#download a,
+#done a {
     /* Rectangle 16: */
     background-image: linear-gradient(-180deg, #FFFFFF 0%, #727272 100%);
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
@@ -232,13 +234,15 @@ a {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-}
-a:hover {
+    
+    &:hover {
     background-image: linear-gradient(-180deg, #FFFFFF 0%, #00C5FF 100%);
+    }
+    &:active {
+        background-image: linear-gradient(-180deg, #00C5FF 0%, #00C5FF 100%);
+    }
 }
-a:active {
-    background-image: linear-gradient(-180deg, #00C5FF 0%, #00C5FF 100%);
-}
+
 
 .add {
     opacity: .5;
@@ -257,4 +261,32 @@ a:active {
 }
 .add:hover {
     opacity: 1;
+}
+
+
+
+nav  {
+    padding: 20px 24px 60px
+    font-size: 13px;
+    a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        border: 1px transparent solid;
+        &:link {
+            color: #fff;
+        }
+        &:visited {
+            color : #eee
+        }
+        &:hover {
+            text-decoration: none
+        }
+        &.current {
+            text-decoration: none;
+            cursor: default;
+            border-color: #999;
+        }
+    }
 }
