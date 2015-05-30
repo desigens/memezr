@@ -1,14 +1,5 @@
 (function() {
 
-	var DEFAULT = [
-    	{text: 'чтобы сделать смешную картинку', top: 170 + 20, 
-    		size: 20, textAlign: 'left'}, 
-    	{text: 'нам нужны были программы', top: 238 + 170 + 20,
-    		size: 30}, 
-    	{text: 'мы рисовали их в MS PAINT, Карл', 
-    		top: 238 * 2 + 140 + 20, size: 40, textAlign: 'right'}
-	];
-	
 	String.prototype.hashCode = function() {
 	    var hash = 0,
 	        i, chr, len;
@@ -418,8 +409,8 @@
 	// Init it!
 
     var meme = new Meme({
-    	imageUrl: '/images/karl.jpg',
-    	texts: new Texts()
+    	imageUrl: window.memeJson.image,
+    	texts: new Texts(window.memeJson.texts)
     });
 
     var view = new MemeView({

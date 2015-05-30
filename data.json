@@ -1,0 +1,33 @@
+{
+    "karl": {
+    	"image": "/images/karl.jpg",
+        "texts": [{
+            "text": "чтобы сделать смешную картинку",
+            "top": 190,
+            "size": 20,
+            "textAlign": "left"
+        }, {
+            "text": "нам нужны были программы",
+            "top": 428,
+            "size": 30
+        }, {
+            "text": "мы рисовали их в MS PAINT, Карл",
+            "top": 636,
+            "size": 40,
+            "textAlign": "right"
+        }]
+    },
+
+    "philosoraptor": {
+        "image": "/images/philosoraptor.jpg",
+        "texts": [{
+            "text": "Если я могу сделать картинку прямо в браузере",
+            "top": 40,
+            "size": 36
+        }, {
+            "text": "то зачем мне вообще этот ваш фотошоп?",
+            "top": 360,
+            "size": 50
+        }]
+    }
+}
