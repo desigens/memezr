@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memezr: create meme online</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        MEMEZR
+        <i>α</i>
+    </header>
+    <div id="container"></div>
+
+    <div id="done" class="bottom">
+        <p>&nbsp;</p>
+        <a>Готово!</a>
+        <p>&nbsp;</p>
+    </div>
+
+    <div id="download" class="get bottom">
+        <p>Кажется, получилось смешно!</p>
+        <a>Скачать картинку</a>
+        <p>&nbsp;</p>
+    </div>
+
+    <!-- Когда закончите — кликните на любую часть страницы -->
+
+    <script type="text/template" id="template">
+        <div contentEditable="true" class="<%=data.fontFamily%>"><%=data.text%></div>
+        <span class="handler">
+        ................
+            <i class="plus">+</i>
+            <i class="minus">-</i>
+            <i class="left <%=data.textAlign==='left'?'selected':''%>"></i>
+            <i class="center <%=data.textAlign==='center'?'selected':''%>"></i>
+            <i class="right <%=data.textAlign==='right'?'selected':''%>"></i>
+            <select class="font-face">
+                <option <%=data.fontFamily==='Arial'?'selected':''%>>Arial</option>
+                <option <%=data.fontFamily==='Impact'?'selected':''%>>Impact</option>
+                <option <%=data.fontFamily==='Times'?'selected':''%>>Times</option>
+            </select>
+            <i class="remove">&times;</i>
+        </span>
+    </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter30571517 = new Ya.Metrika({id:30571517, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/30571517" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+
+</html>

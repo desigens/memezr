@@ -1,0 +1,20 @@
+{
+  "name": "memezr",
+  "version": "0.1.0",
+  "author": "Denis Denisov",
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-stylus": "~2.0.2",
+    "gulp-uglify": "~1.2.0",
+    "gulp-browserify": "~0.5.1",
+    "gulp-rsync": "0.0.5"
+  },
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.10.5",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.0",
+    "backbone.localstorage": "~1.1.16",
+    "express": "~4.12.4"
+  }
+}
