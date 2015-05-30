@@ -1,5 +1,7 @@
 (function() {
 
+	var DEFAULT = window.memeJson;
+
 	String.prototype.hashCode = function() {
 	    var hash = 0,
 	        i, chr, len;
@@ -61,7 +63,7 @@
 
         	if (this.length === 0) {
 
-        		this.add(DEFAULT);
+        		this.add(DEFAULT.texts);
 
         	}
 
@@ -409,8 +411,8 @@
 	// Init it!
 
     var meme = new Meme({
-    	imageUrl: window.memeJson.image,
-    	texts: new Texts(window.memeJson.texts)
+    	imageUrl: DEFAULT.image,
+    	texts: new Texts(DEFAULT.texts)
     });
 
     var view = new MemeView({
